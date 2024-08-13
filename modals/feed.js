@@ -11,7 +11,7 @@ const feedSchema = {
         required: true,
         unique: true
     },
-    massage: {
+    message: {
         type: String,
         required: true
     },
