@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 var cors = require('cors')
 const userRoute = require("./router/user");
 const recipeRoute =require("./router/recipes")
-// const cardRoute =require("./routes/CardRouter")
+ const feedRoute =require("./router/feedback")
 const app = express();
 app.use(cors())
 app.options('*', cors())
@@ -37,7 +37,7 @@ if (process.env.SERVER=="LOCAL") {
 app.use(express.json());
 app.use("/api/v1/user/",userRoute);
 app.use("/api/v1/recipe/",recipeRoute);
-// app.use("/api/v1/card/",cardRoute);
+app.use("/api/v1/",feedRoute);
 
 app.listen(process.env.PORT, () => {
   console.log("listening on "+process.env.PORT);
