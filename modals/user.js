@@ -1,4 +1,4 @@
-const { Mongoose } = require("mongoose");
+
 const mongoose = require("mongoose");
 
 
@@ -6,7 +6,6 @@ const userSchema = {
     name: {
         type: String,
         required: true,
-        unique: true
     },
     email: {
         type: String,
@@ -17,7 +16,6 @@ const userSchema = {
         type: String,
         required: true
     },
-
     Date: {
         type: Date,
         required: true,

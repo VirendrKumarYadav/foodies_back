@@ -23,8 +23,6 @@ const userRgistration = async (req, res) => {
         res.json({
             success: true,
             massage: "User Sucessfully Resistered, Let's go to the Login Page!",
-
-
         });
 
     } catch (error) {
@@ -46,7 +44,6 @@ const userLogin = async (req, res) => {
             });
         }
         const isMatch = await bcrypt.compare(req.body.password, user.password);
-        console.log(req.body.password, user.password);
 
         if (isMatch) {
             const expiryDateTime = Math.floor(new Date().getTime() / 1000) + 7200;
